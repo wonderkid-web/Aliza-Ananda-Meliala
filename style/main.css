@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@340&family=Satisfy&display=swap');
+
+body{
+	/*background: #851D41;*/
+	margin: 0;
+	padding: 0;
+	background-color: hsla(230,40%,50%,1);
+}
+header{
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	text-align: center;
+	color: hsla(230,40%,50%,1);
+ 	font-family: 'Mukta', sans-serif;
+	background-color: white;
+	letter-spacing: .4em;
+}
+header h1 span{
+	letter-spacing: 0;
+}
+.box1{
+	display: grid;
+	margin: auto;
+	margin-top: 25px;
+}
+/*.box1 h1{
+	color: #E6B566;
+	text-shadow: 0 0 25px rgba(0, 0, 0, .9);
+	background: -webkit-linear-gradient(#E8E9A1, #E6B566);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	font-size: 2.3em;
+	font-family: 'Satisfy', cursive;
+}*/
+.box1 .hbd{
+	box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+	border: 3px solid #FFB99A;
+	margin: auto;
+	margin-top: 10vh;
+	animation: hbd 3s infinite;
+}
+.box1 h1 {
+  display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 12em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+  .box1 h1:after {
+    content: attr(data-shadow);
+    position: absolute;
+    left: 2.3em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
+}
+.typed-out{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: typing 2.5s infinite;
+}
+.box1 button{
+	padding: 10px;
+	margin: auto;
+	color: hsla(230,40%,50%,1);
+	width: 30vw;
+	background-color: white;
+	font-family: 'Mukta', sans-serif;
+	border: none;
+	border-radius: 5px;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+@keyframes hbd{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+@media (max-width: 500px){
+	
+	.box1 .hbd{
+		max-width: 370px;
+	}
+	.box1 .gif{
+		margin: auto;
+		margin-top: -300px;
+		margin-bottom: 30px;
+		max-width: 370px;
+	}
+	.box1 h1{
+		transform: scale(.5);
+		position: relative;
+		top: -150px;
+		left: -10px;
+	}
+	.box1 button{
+		margin-bottom: 30px;
+	}
+	.box1 h1:after{
+		left: .1em;
+	}
+}
